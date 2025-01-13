@@ -10,19 +10,15 @@ import java.io.IOException;
 public class TemplateGenerator {
 
     public static void main(String[] args) {
-        // The directory to check for .doc files
         File inputDir = new File("/Users/civitalis/Downloads/Datenverarbeitung/01_Bemessungsgrundlage/");
 
-        // Check if the directory exists and is a directory
         if (inputDir.exists() && inputDir.isDirectory()) {
             System.out.println("Directory found: " + inputDir.getAbsolutePath());
 
             findDocFiles(inputDir);
 
-            // List all files in the directory with a .doc extension
             File[] docFiles = inputDir.listFiles((dir, name) -> name.endsWith(".doc"));
 
-            // Check if there are any .doc files
             if (docFiles != null && docFiles.length > 0) {
                 System.out.println("Found the following .doc files:");
                 for (File docFile : docFiles) {
@@ -37,17 +33,13 @@ public class TemplateGenerator {
     }
 
     private static void findDocFiles(File dir) {
-        // Get all files and folders in the current directory
         File[] files = dir.listFiles();
 
-        // Check if the list is not null and there are items in the directory
         if (files != null) {
             for (File file : files) {
-                // If it's a directory, recursively call the method
                 if (file.isDirectory()) {
                     findDocFiles(file); // Recursive call
                 } else if (file.isFile() && file.getName().endsWith(".doc")) {
-                    // If it's a .doc file, print the file name
                     System.out.println("Found .doc file: " + file.getAbsolutePath());
                 }
             }
