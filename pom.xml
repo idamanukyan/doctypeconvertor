@@ -14,12 +14,42 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-        <dependencies>
-            <dependency>
-                <groupId>org.apache.poi</groupId>
-                <artifactId>poi-ooxml</artifactId>
-                <version>5.2.3</version>
-            </dependency>
-        </dependencies>
+    <dependencies>
+        <!-- Apache POI for Word (.doc and .docx) -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>3.17</version> <!-- Use version 3.17 -->
+        </dependency>
+
+        <!-- Apache POI for OOXML (docx) schemas -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>3.17</version>
+        </dependency>
+
+        <!-- Apache POI for handling .doc files -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-hwpf</artifactId>
+            <version>3.17</version> <!-- Use version 3.17 for HWPF -->
+        </dependency>
+
+        <!-- Apache POI for OOXML schemas -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml-schemas</artifactId>
+            <version>3.17</version>
+        </dependency>
+
+        <!-- Optional: Apache Commons IO for easier file I/O operations -->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.11.0</version>
+        </dependency>
+    </dependencies>
+
 
 </project>
