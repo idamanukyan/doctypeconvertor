@@ -46,6 +46,10 @@ public class TemplateHelper {
         retrieveFromDocMainTable(document);
     }
 
+    public static void addRestData(XWPFDocument document){
+
+    }
+
     private static String retrieveMappingNameFromDoc(XWPFDocument document){
         return "";
     }
@@ -67,7 +71,6 @@ public class TemplateHelper {
     }
 
     private static void retrieveFromDocMainTable(XWPFDocument document){
-
     }
 }
 
